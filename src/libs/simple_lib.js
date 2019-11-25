@@ -20,7 +20,7 @@ export function copyObject(o)
     v = o[key];
     if (v)
     {
-      output[key] = (typeof v === "object") ? this.copyObject(v) : v;
+      output[key] = (typeof v === "object") ? copyObject(v) : v;
     } else
     {
       output[key] = v;
